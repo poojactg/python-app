@@ -12,8 +12,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATA=myname
-          gh workflow run "Workflow for Python-CI" --ref features pooja03ydv/python-app -f FILE=$DATA 
+      - name:  pass input 
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          gh workflow run "Workflow for Python-CI" --ref features pooja03ydv/python-app -f FILE=$DATA

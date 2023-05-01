@@ -1,4 +1,4 @@
-name: Workflow for Python-CI
+name: PYTHON CI
 
 on:
  pull_request:
